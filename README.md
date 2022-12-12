@@ -68,7 +68,7 @@ We employed a Convolutional Neural Network (CNN) with three hidden layer.
 - ***Hidden layer #3:*** `Linear(147456,128)` &rarr; `ReLu`.
 - ***Output layer:*** `Linear(128,29)` &rarr; `Softmax`.
 
-However, we did not include the the last `Softmax` function in our model because the `CrossEntropyLoss` function implemented in `pytoch` will take it into account on its own during training. Also, once the network has been trained, we can simply use the `max` function because gradient is no longer required.
+However, we did not include the the last `Softmax` function in our model because the `CrossEntropyLoss` function implemented in `pytoch` will take it into account on its own during training. Instead, once the network has been trained, the'max' function can be used as the final activation because gradient is no longer required.
 
 Using `Torch-Summary` we can generated a description of our model:
 ```python
