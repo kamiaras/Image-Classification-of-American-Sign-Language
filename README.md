@@ -122,7 +122,7 @@ For the testing data-set, the confusion matrix was computed. For this matrix, a 
 The *Loss* and the *Accuracy* of each 50 iteration (for 50 batches)  were averaged and plotted in the following graph: [Training_Time_Loss](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/0a2c5c0f7f1b8a859b660369112eb973282cb5f9/Training_Time_Loss.png) and [Training_Time_Accuracy](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/0a2c5c0f7f1b8a859b660369112eb973282cb5f9/Training_Time_Accuracy.png) respectively.
 
 # Acknowledgements
-We'd like to thank [Zalan Fabian](https://z-fabian.github.io/) and [Berk Tinaz](tinaz@usc.edu) for his help and advice.
+We'd like to thank [Zalan Fabian](https://z-fabian.github.io/) and [Berk Tinaz](mailto:tinaz@usc.edu) for his help and advice.
 
 # License
 
