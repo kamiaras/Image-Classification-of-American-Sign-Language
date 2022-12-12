@@ -5,8 +5,9 @@ Final project for:
 - University: **University of Southern California (USC)**
 - Instructor: **Dr. Brandon Franzke**
 - Semester: **Fall 2022**
+- Student Team: [**Kamiar Asgari**](https://github.com/kamiarasgari) and [**Mohammadmahdi Sajedi**]()
 
-# Requirements
+# Required Packages
 - [PyTorch](https://pytorch.org/) 
 - [Torch-Summary](https://pypi.org/project/torch-summary/)
 - [Matplotlib](https://matplotlib.org/)
@@ -20,6 +21,8 @@ Final project for:
 - [Model](#Model)
 - [Training Parameters](#Training-Parameters)
 - [Results](#Results)
+- [#Acknowledgement](#Acknowledgement)
+- [#License](#License)
 
 
 # Dataset
@@ -105,15 +108,25 @@ scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.7)
 We ran the algorithm for five *epochs* (`num_epochs=5`).
 
 # Results
+Our algorithm was tested on a `cuda` device, a *NVIDIA Quadro RTX 5000* graphics card. Over a *AMD RYZENTM 7 PRO 5850U PROCESSOR*, this improved performance by about 5 times, from 74 minutes to 15 minutes.
+
 ## Final Model
 Our final model gave us:
 - Accuracy in the training data-set: 99.64%. 
 - Accuracy in the validation data-set: 97.41%.
-- Accuracy in the tetsing data-set: 97.56%. 
+- Accuracy in the testing data-set: 97.56%. 
+
+For the testing data-set, the confusion matrix was computed. For this matrix, a heatmap [heatmap](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/b36871d739b255ba70ce19865692186487ace32a/Full_Confusion_Matrix.png) was created. However, the algorithm's high accuracy renders it useless. So we created another [heatmap](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/b36871d739b255ba70ce19865692186487ace32a/diog_zeroed_conf_matr.png) for a new matrix that was identical to the original confusion matrix except for the diogonal elements, which were set to zero.
 
 ## Training time
 The *Loss* and the *Accuracy* of each 50 iteration (for 50 batches)  were averaged and plotted in the following graph: [Training_Time_Loss](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/0a2c5c0f7f1b8a859b660369112eb973282cb5f9/Training_Time_Loss.png) and [Training_Time_Accuracy](https://github.com/kamiarasgari/Image_Classification_of_American_Sign_Language/blob/0a2c5c0f7f1b8a859b660369112eb973282cb5f9/Training_Time_Accuracy.png) respectively.
 
+# Acknowledgements
+We'd like to thank [Zalan Fabian](https://z-fabian.github.io/) for his help and advice.
+
+# License
+
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 
