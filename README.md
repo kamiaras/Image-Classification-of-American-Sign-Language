@@ -19,11 +19,8 @@ Final project for:
 - [Numpy](https://numpy.org/)
 
 # Table Of Contents
--  [In a Nutshell](#in-a-nutshell)
--  [In Details](#in-details)
--  [Future Work](#future-work)
--  [Contributing](#contributing)
--  [Acknowledgments](#acknowledgments)
+- [Dataset](#Dataset)
+
 
 # Dataset
 The dataset used for this project was created by [Akash Nagaraj](https://github.com/grassknoted). It is available on Kaggle as the [ASL Alphabet](https://www.kaggle.com/grassknoted/asl-alphabet) Dataset.
@@ -32,6 +29,14 @@ The dataset used for this project was created by [Akash Nagaraj](https://github.
 The data set is a collection of images of alphabets from the American Sign Language, separated in 29 folders which represent the various classes.
 - The training data set contains 87,000 images which are 200x200 pixels. There are 29 classes, of which 26 are for the letters *"A"* through *"Z"* and 3 classes for *"SPACE"*, *"DELETE"* and *"NOTHIN"*.
 - The test data set contains a mere 29 images, to encourage the use of real-world test images.
+
+# Handaling the data
+We used a generic data loader called `ImageFolder` imported from `torchvision` library. It works well when the images are arranged similarly to our data-set.
+```python
+from torchvision import datasets
+data_set = datasets.ImageFolder(<PATH to DATA FOLDER>, transform=transforms.ToTensor())
+```
+The data-set is divided into three parts: *training*, *testing*, and *validation*, with ratios of 80%, 10%, and 10%, respectively.
 
 # Model
 We employed a convolutional neural network (CNN) with the following [Torch-Summary](https://pypi.org/project/torch-summary/)-generated description:
@@ -62,4 +67,11 @@ The selected *Loss function* is *Cross-Entropy Loss*, which is a common solution
 ```python
 loss_func = nn.CrossEntropyLoss()
 ```
-The optimazer algorithm was chosen to be Stochastic Gradient Descent (SGD) with a starting learing rate 
+Stochastic Gradient Descent (SGD) was chosen as the optimizer algorithm with an initial *learning rate* of 'lr=0.05' and a *momentum* of'momentum=0.9'.
+```python
+optimizer = optim.SGD(model.parameters(), lr=0.05, momentum=0.9)
+```
+The learning rate scheduler modifies the 'learning rate' by multiplying it by 'gamma=0.7' after each epoch ('step size=1').
+```python
+scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.7)
+```
