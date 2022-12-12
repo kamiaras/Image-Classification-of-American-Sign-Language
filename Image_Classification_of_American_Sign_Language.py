@@ -86,9 +86,6 @@ class Net(nn.Module):
         self.conv2 = nn.Conv2d(kernel_size=(3, 3),out_channels=64,in_channels=32)
         self.pool2 = nn.MaxPool2d(2, 2)
 
-        self.conv3 = nn.Conv2d(kernel_size=(3, 3),out_channels=64,in_channels=64)
-        self.pool3 = nn.MaxPool2d(2, 2)
-
         self.fc1 = nn.Linear(147456 , 128)
         self.fc2 = nn.Linear(128, 29)
 
