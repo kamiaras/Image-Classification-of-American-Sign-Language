@@ -5,7 +5,7 @@ Final project for:
 - University: **University of Southern California (USC)**
 - Instructor: **Dr. Brandon Franzke**
 - Semester: **Fall 2022**
-- Student Team: [**Kamiar Asgari**](https://github.com/kamiarasgari) and [**Mohammadmahdi Sajedi**]()
+- Student Team: [**Kamiar Asgari**](https://github.com/kamiarasgari)
 
 # Required Packages
 - [PyTorch](https://pytorch.org/) 
